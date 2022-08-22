@@ -17,7 +17,7 @@ tracker = Tracker(
   distance_threshold= 3.33,
 )
 
-paths_drawer = Paths(rp.center, color=(255,0,0), thickness=-1, radius=2, attenuation=0.1)
+paths_drawer = Paths(rp.center, color=(255,0,0), thickness=-1, radius=2, attenuation=0.08)
 
 video = Video(input_path="tokyo.mkv")
 # For camera
@@ -59,7 +59,7 @@ for frame in video:
 
   tracked_objects = tracker.update(detections=detections)
 
-  draw_tracked_boxes(im0, tracked_objects, border_colors=[200])
+  draw_tracked_boxes(im0, tracked_objects, border_colors=[200], border_width= 1)
   
   im0 = paths_drawer.draw(im0, tracked_objects)
   cv2.imshow("frame", im0)
