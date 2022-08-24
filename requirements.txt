@@ -1,4 +1,4 @@
-certifi @ file:///opt/conda/conda-bld/certifi_1655968806487/work/certifi
+# certifi @ file:///opt/conda/conda-bld/certifi_1655968806487/work/certifi
 charset-normalizer==2.1.1
 colorama==0.4.5
 commonmark==0.9.1
